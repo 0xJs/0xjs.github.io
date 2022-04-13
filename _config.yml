@@ -26,11 +26,10 @@ title: 0xjs                          # the main title
 
 tagline: 0xjs his webpage  # it will display as the sub-title
 
-description: >-                        # used by seo meta and the atom feed
-  0xjs, Jony Schats his webpage to post Pentesting / RedTeaming content, blogs etc.
+description: 0xjs, Jony Schats his webpage to post Pentesting / RedTeaming content, blogs etc.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: '0xjs.github.io'
+url: 'https://0xjs.github.io'
 
 github:
   username: 0xjs             # change to your github username
