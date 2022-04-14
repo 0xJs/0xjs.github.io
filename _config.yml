@@ -22,9 +22,9 @@ timezone: Europe/Amsterdam
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: 0xjs                          # the main title
+title: Jony Schats / 0xjs                        # the main title
 
-tagline: 0xjs his webpage  # it will display as the sub-title
+tagline: Ethical Hacker & Security enthusiast  # it will display as the sub-title
 
 description: 0xjs, Jony Schats his webpage to post Pentesting / RedTeaming content, blogs etc.
 
