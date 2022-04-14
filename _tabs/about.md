@@ -4,5 +4,7 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+# Projects
+- [RedTeaming Cheatsheet](https://github.com/0xJs/RedTeaming_CheatSheet)
+- [AD audit tool](https://github.com/0xJs/domain_audit)
+- [Building a windows AD Lab](https://ad-lab.gitbook.io/building-a-windows-ad-lab/)
