@@ -14,7 +14,7 @@ author:
 # Introduction
 During some courses I have been working with the AzureAD PowerShell Module to retrieve information from Users, Groups, Roles etc. While working with these cmdlets it was annoying that it doesn't have a functionality to recursivly search through group objects. So I wrote two modules to recursivly search through group objects and roles and only return the user objects. Then I also wanted to get a overview of the Azure AD roles used and their members, and what about privileged roles? In this blogpost I will describe and share the PowerShell cmdlets I created which will help with enumerating Azure AD Group and Role memberships.
 
-## The problem with Azure AD cmdlets to query for memberships
+## The problem with Azure AD cmdlets when querying for memberships
 When quering members of a group with the cmdlet `Get-AzureADGroupMember` the cmdlet returns user and group objects. In the output below an example is shown where it returns the user `GroupUser` and the group `NestedGroup`.
 
 ```
