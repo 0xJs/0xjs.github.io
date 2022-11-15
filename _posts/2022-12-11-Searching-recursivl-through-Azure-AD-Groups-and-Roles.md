@@ -12,10 +12,18 @@ author:
 ---
 
 # Introduction
-During some courses I have been working with the AzureAD PowerShell Module to retrieve information from Users, Groups, Roles etc. While working with these cmdlets it was annoying that it doesn't have a functionality to recursivly search through group objects. So I wrote two modules to recursivly search through group objects and roles and only return the user objects. Then I also wanted to get a overview of the Azure AD roles used and their members, and what about privileged roles? In this blogpost I will describe and share the PowerShell cmdlets I created which will help with enumerating Azure AD Group and Role memberships.
+During some courses I have been working with the AzureAD PowerShell Module to retrieve information from Users, Groups, Roles etc. While working with these cmdlets it was annoying that it doesn't have a functionality to recursivly search through group objects. So I wrote two modules to recursivly search through group objects and roles and only return the user objects. Then I also wanted to get a overview of the Azure AD roles and privileged roles and their users? This blogpost will be the first of the series about priviliged identities. In this blogpost I will describe and share the PowerShell cmdlets I created which will help with enumerating Azure AD Group and Role user memberships.
 
-## The problem with Azure AD cmdlets when querying for memberships
-When quering members of a group with the cmdlet `Get-AzureADGroupMember` the cmdlet returns user and group objects. In the output below an example is shown where it returns the user `GroupUser` and the group `NestedGroup`.
+In Azure there are three identities that can have access to resources:
+- Users
+- Groups
+	- Can have users, serviceprincipals or other groups as members
+- ServicePrincipals
+
+In the first blog we will focus on retrieving users out of groups and roles.
+
+# The problem with Azure AD cmdlets when querying for memberships
+When quering members of a group with the cmdlet `Get-AzureADGroupMember` the cmdlet returns user, serviceprincipal and group objects. In the output below an example is shown where it returns the user `GroupUser` and the group `NestedGroup`.
 
 ```
 Get-AzureADGroupMember -ObjectId f5108639-9aca-4694-864e-c4e00186706b
@@ -67,8 +75,8 @@ SecurityEnabled              : True
 
 The output is missing the user of the group `Security Reader AD Group`.
 
-## New cmdlets for recursively searching through groups and roles
-#### Get-AzureADGroupMemberRecursive
+# New cmdlets for recursively searching through groups and roles
+### Get-AzureADGroupMemberRecursive
 So I created the PowerShell cmdlet `Get-AzureADGroupMemberRecursive` which takes a group object as input and recursivly searches through all group objects and returns user objects. The code of the cmdlet is:
 
 ```powershell
@@ -128,7 +136,7 @@ ObjectId                             DisplayName     UserPrincipalName          
 eb815e66-31a5-45ca-bed8-2b0f5e24f62f GroupUser       GroupUser@jonyschats.nl       Member
 ```
 
-#### Get-AzureADDirectoryRoleMemberRecursive
+### Get-AzureADDirectoryRoleMemberRecursive
 Roles can also have user and group objects as members. So I created the PowerShell cmdlet `Get-AzureADDirectoryRoleMemberRecursive` which uses the `Get-AzureADGroupMemberRecursive` cmdlet to recursivly search through all the groups assigned to the role and returns all the users. The code of the cmdlet is:
 
 ```powershell
@@ -188,8 +196,8 @@ ObjectId                             DisplayName     UserPrincipalName          
 fb8a7905-e32c-4431-9e66-2968013f924f SecurityReader  SecurityReader@jonyschats.nl  Member
 ```
 
-## New cmdlets for enumerating roles
-#### Get-AzureADDirectoryRoleOverview
+# New cmdlets for enumerating roles
+### Get-AzureADDirectoryRoleOverview
 AzureAD has a lot of [built-in roles](https://learn.microsoft.com/en-us/azure/active-directory/roles/permissions-reference) but the AzureAD cmdlet `Get-AzureADDirectoryRole` only returns the roles which are [activated](https://github.com/Azure/azure-docs-powershell-azuread/issues/245). Using this information we can easily request all activated roles and retrieve its users with the cmdlet I created earlier. But I woud like to get an overview of how many users each role has and who the users are. So I created the cmdlet `Get-AzureADDirectoryRoleOverview`:
 
 ```powershell
@@ -382,8 +390,7 @@ Role                 UserCount Members
 Global Administrator         1 0xjs@jonyschats.nl
 ```
 
-## GitHub
+# GitHub
 All the cmdlets can be found in my GitHub project [AzurePowerCommand](https://github.com/0xJs/AzurePowerCommands).
 
-Here is a sneakpeak to the next cmdlet which has to do with retrieving the MFA configuration of users:
-![Get-AzureADUserMFAConfiguration](/assets/img/MFA.png)
+The next blog in the series will be about GroupOwners.
