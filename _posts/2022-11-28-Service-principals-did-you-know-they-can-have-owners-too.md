@@ -4,7 +4,7 @@ published: true
 
 
 title: "Service principals, did you know they can have owners too?"
-date: 2022-11-23 12:40:00 +0100
+date: 2022-11-28 20:12:00 +0100
 categories: [Ethical Hacking, Azure]
 tags: [ethical hacking, azure]     # TAG names should always be lowercase
 author:
@@ -12,18 +12,18 @@ author:
 ---
 
 # Introduction
-This is the third blog in the series. If you havent read the [first](https://jonyschats.nl/posts/What-is-the-MFA-status-of-your-users/) or [second](https://jonyschats.nl/posts/Do-you-check-for-group-owners-of-privileged-roles/) blog I recommend reading them. In the previous blogpost we focussed on retrieving group owners and that they should be considered as high privileged users if the group he owns is member of a high privileged role. In this blogpost we will have a look at Service Principals and they can have owners too!
+This is the third blog in the series. If you haven't read the [first](https://jonyschats.nl/posts/What-is-the-MFA-status-of-your-users/) or [second](https://jonyschats.nl/posts/Do-you-check-for-group-owners-of-privileged-roles/) blog I recommend reading them. In the previous blogpost we focussed on retrieving group owners and that they should be considered as high privileged users if the group he owns is member of a high privileged role. In this blogpost we will have a look at Service Principals and they can have owners too!
 
 # Service princpals
 In the first blog we discussed that there are three identities that can access resources; Users, Groups and Service Principals. You might be wondering what is a service principal, [Microsoft](https://learn.microsoft.com/en-us/azure/active-directory/develop/app-objects-and-service-principals) defines; 
 
-> A service principal is created in each tenant where the application is used and references the globally unique app object. The service principal object defines what the app can actually do in the specific tenant, who can access the app, and what resources the app can access.
+A service principal is created in each tenant where the application is used and references the globally unique app object. The service principal object defines what the app can actually do in the specific tenant, who can access the app, and what resources the app can access.
 
 As an example I created an app in my Azure Active Directory in "App registrations" with the name `Test_enterpriseapp`.
 
 ![Exam timeline](/assets/img/app_registration.png)
 
-When creating the app a service principal is automatically registered and can be found in the "Enterprise application" section of Azure Active Directory.
+When creating the app, a service principal is automatically registered and can be found in the "Enterprise application" section of Azure Active Directory.
 
 ![Exam timeline](/assets/img/service_principal.png)
 
@@ -69,7 +69,7 @@ ObjectId                             DisplayName           UserPrincipalName    
 ## Updating the overview cmdlet
 To get a good overview again I changed the existing `Get-AzureADPrivilegedRolesOverview` cmdlet and added the SPsCount, SPs and SPsOwners attributes.
 
-```PowerShell
+```powershell
 Function Get-AzureADPrivilegedRolesOverview{
 <#
 .SYNOPSIS
