@@ -12,7 +12,7 @@ author:
 ---
 
 ## Introduction
-I just passed the [Practical Network Penetration Tester](https://certifications.tcm-sec.com/pnpt/) exam. I heard a lot of good things about the course and I also received a lot of questions about if I knew the course was good. So, I decided to take the course and exam so I knew where the course was about and how good it was.
+I just passed the [Practical Network Penetration Tester](https://certifications.tcm-sec.com/?ref=32) exam. I heard a lot of good things about the course and I also received a lot of questions about if I knew the course was good. So, I decided to take the course and exam so I knew where the course was about and how good it was.
 
 ## The material
 The PNPT course consists out of five modules which can be bought as standalone courses, consisting off:
@@ -62,6 +62,8 @@ I created a simple presentation for the debrief containing a summary of the diff
   - Infrastructure: https://github.com/0xJs/RedTeaming_CheatSheet/tree/main/infrastructure
   - Active Directory (CRTP) simplified version of the AD part in my redteaming cheatsheet: https://github.com/0xJs/CRTP-cheatsheet
 - Take your time during the exam to sleep properly, take breaks, go for walks etc. Especially having a walk outside can really help when being stuck by going over what you have tried etc.
+
+Edit: If you liked the review and want to buy the PNPT exam, please use [this](https://certifications.tcm-sec.com/?ref=32) affiliate link and ill get a small kickback.
 
 ## Conclusion
 I really liked the setup of the course and the exam environment. It simulates a real-life scenario penetration test and learns you the basics on how to perform one. It is the perfect course for beginners and I wish I was able to take it when I started my Ethical Hacking journey two years ago.
