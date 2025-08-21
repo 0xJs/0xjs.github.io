@@ -7,8 +7,7 @@ title: "Service principals, did you know they can have owners too?"
 date: 2022-11-28 20:12:00 +0100
 categories: [Ethical Hacking, Azure]
 tags: [ethical hacking, azure]     # TAG names should always be lowercase
-author:
-  name: "Jony Schats"
+author: jony
 ---
 
 # Introduction

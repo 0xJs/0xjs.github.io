@@ -7,8 +7,7 @@ title: "Identifying highly privileged identities and checking MFA status"
 date: 2022-12-18 20:35:00 +0100
 categories: [Ethical Hacking, Azure]
 tags: [ethical hacking, azure]     # TAG names should always be lowercase
-author:
-  name: "Jony Schats"
+author: jony
 ---
 
 # Introduction

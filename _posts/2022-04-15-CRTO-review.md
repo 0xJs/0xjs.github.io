@@ -7,8 +7,7 @@ title: "CRTO review"
 date: 2022-04-17 20:57:00 +0200
 categories: [Ethical Hacking, Reviews]
 tags: [ethical hacking, red teaming]     # TAG names should always be lowercase
-author:
-  name: "Jony Schats"
+author: jony
 ---
 
 ## Introduction

@@ -7,8 +7,7 @@ title: "PNPT review"
 date: 2022-06-16 16:51:00 +0200
 categories: [Ethical Hacking, Reviews]
 tags: [ethical hacking]     # TAG names should always be lowercase
-author:
-  name: "Jony Schats"
+author: jony
 ---
 
 ## Introduction

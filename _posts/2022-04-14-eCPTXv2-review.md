@@ -7,8 +7,7 @@ title: "eCPTXv2 review"
 date: 2022-04-14 18:57:00 +0200
 categories: [Ethical Hacking, Reviews]
 tags: [ethical hacking, red teaming]     # TAG names should always be lowercase
-author:
-  name: "Jony Schats"
+author: jony
 ---
 
 ## Introduction

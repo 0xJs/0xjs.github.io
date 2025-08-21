@@ -7,8 +7,7 @@ title: "CESP review"
 date: 2023-08-24 15:30:00 +0200
 categories: [Ethical Hacking, Reviews]
 tags: [ethical hacking, red teaming]     # TAG names should always be lowercase
-author:
-  name: "Jony Schats"
+author: jony
 ---
 
 ## Introduction

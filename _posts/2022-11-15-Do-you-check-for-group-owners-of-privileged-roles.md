@@ -7,8 +7,7 @@ title: "Do you check for group owners of privileged roles?"
 date: 2022-11-15 19:40:00 +0100
 categories: [Ethical Hacking, Azure]
 tags: [ethical hacking, azure]     # TAG names should always be lowercase
-author:
-  name: "Jony Schats"
+author: jony
 ---
 
 # Introduction
